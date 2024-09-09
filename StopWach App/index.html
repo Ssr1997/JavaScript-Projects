@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata settings for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to an external stylesheet (CSS) for styling the stopwatch -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Title of the webpage that will be displayed on the browser tab -->
+    <title>StopWatch</title>
+</head>
+<body>
+    <!-- Stopwatch display container -->
+    <div class="stopwatch">
+        <!-- Display area for the timer (initially set to 00:00:00) -->
+        <div class="timerDisplay">00 :00 : 00</div>
+    </div>
+    
+    <!-- Button controls for Start, Stop, and Reset -->
+    <div class="buttons">
+        <!-- Stop button, with red color defined using the custom CSS property '--clr' -->
+        <button id="stopBtn" class="btn" style="--clr:red">Stop</button>
+        
+        <!-- Start button, with green color defined using the custom CSS property '--clr' -->
+        <button id="startBtn" class="btn" style="--clr:green">Start</button>
+        
+        <!-- Reset button, with blue color defined using the custom CSS property '--clr' -->
+        <button id="resetBtn" class="btn" style="--clr:blue">Reset</button>
+    </div>
+    
+    <!-- Link to the external JavaScript file that will handle the stopwatch functionality -->
+    <script src="script.js"></script>
+</body>
+</html>

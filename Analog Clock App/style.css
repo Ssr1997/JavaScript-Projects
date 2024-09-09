@@ -1,0 +1,78 @@
+/* Apply universal styles to all elements */
+*{
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Ensure padding and border are included in element's width and height */
+    font-family: sans-serif; /* Set a universal sans-serif font */
+    color: #ffff; /* Set the default text color to white */
+}
+
+/* Style for the body */
+body{
+    display: flex; /* Use flexbox to align content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Set the minimum height to 100% of the viewport height */
+    background-color: #212121; /* Set a dark background color */
+}
+
+/* Container holding the clock */
+.container{
+    position: relative; /* Set the container to relative for positioning purposes */
+}
+
+/* Style for the clock */
+.clock{
+    width: 300px; /* Set clock width */
+    height: 300px; /* Set clock height */
+    border-radius: 50%; /* Make the clock round */
+    background-color: rgba(255, 255, 255, 0.1); /* Apply a light transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.25); /* Light semi-transparent border */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.9); /* Apply a dark shadow to give depth */
+    display: flex; /* Use flexbox to position clock hands and numbers */
+    justify-content: center; /* Center clock hands horizontally */
+    align-items: center; /* Center clock hands vertically */
+}
+
+/* Styling for clock's hour markers (numbers) */
+.clock span{
+    position: absolute; /* Position them absolutely within the clock */
+    transform: rotate(calc(30deg * var(--i))); /* Rotate them according to their position on the clock face (each is 30 degrees apart) */
+    inset: 12px; /* Offset the markers slightly inward from the clock's edge */
+    text-align: center; /* Center the text inside each marker */
+}
+
+/* Styling the actual text (numbers) inside the clock markers */
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i))); /* Rotate the text back to make it upright */
+    display: inline-block; /* Ensure that rotation affects only the text */
+    font-size: 20px; /* Set the font size of the numbers */
+}
+
+/* Central point (pivot) of the clock */
+.clock::before{
+    content: ''; /* Create an empty element (dot) */
+    position: absolute; /* Position the dot at the center */
+    width: 8px; /* Set width of the central dot */
+    height: 8px; /* Set height of the central dot */
+    border-radius: 50%; /* Make the dot circular */
+    background-color: #ffff; /* Make the dot white */
+    z-index: 2; /* Ensure the dot appears above the clock hands */
+}
+
+/* Base styles for the clock hands */
+.hand{
+    position: absolute; /* Position hands within the clock */
+    display: flex; /* Use flexbox to align the hand */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-end; /* Align the hand to the bottom (the pivot) */
+}
+
+/* Style for the actual hand (the thin bar that moves) */
+.hand i{
+    position: absolute; /* Position the hand within the clock hand container */
+    background-color: var(--clr); /* Set hand color using a custom property */
+    width: 4px; /* Set the hand width */
+    height: var(--h); /* Set the hand height dynamically using a custom property */
+    border-radius: 8px; /* Round the hand edges slightly */
+}

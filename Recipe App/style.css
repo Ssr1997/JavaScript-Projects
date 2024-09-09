@@ -1,0 +1,234 @@
+/* Importing the Bree Serif font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* Universal styles applied to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Ensures padding and border are included in element's total width and height */
+    font-family: 'Bree Serif', serif;  /* Applies the Bree Serif font to all text */
+    font-weight: 500;  /* Medium weight for text */
+    font-style: italic;  /* Italic style for all text */
+}
+
+/* Styling for the body element */
+body {
+    background-color: #2b1d0f;  /* Dark brown background color */
+    color: #fff;  /* White text color */
+}
+
+/* Styling for the header's navigation bar */
+header nav {
+    background-color: #212121;  /* Dark grey background for the nav bar */
+    padding: 20px;  /* Padding inside the nav bar */
+    display: flex;  /* Flexbox layout for horizontal alignment */
+    justify-content: space-between;  /* Space between header elements */
+    align-items: center;  /* Align items vertically center */
+    z-index: 1;  /* Ensures nav is above other content */
+}
+
+/* Styling for the heading in the nav bar */
+header nav h1 {
+    font-size: 26px;  /* Font size for the heading */
+    font-weight: 700;  /* Bold weight for the heading */
+    letter-spacing: 1px;  /* Slightly spaced letters */
+    text-transform: uppercase;  /* Uppercase text */
+}
+
+/* Styling for the form within the nav bar */
+header nav form {
+    display: flex;  /* Flexbox layout for form elements */
+    justify-content: center;  /* Center items horizontally */
+}
+
+/* Styling for the text input in the form */
+form input[type="text"] {
+    flex-grow: 1;  /* Allows the input to expand and fill available space */
+    margin-right: 10px;  /* Margin on the right side of the input */
+}
+
+/* Common styling for the text input and submit button in the form */
+form input[type="text"], button[type="submit"] {
+    border: none;  /* Removes default border */
+    font-size: 18px;  /* Font size for text input and button */
+    padding: 10px;  /* Padding inside the input and button */
+    border-radius: 4px;  /* Rounded corners */
+}
+
+/* Styling for the submit button in the form */
+form button[type="submit"] {
+    background-color: #f44336;  /* Red background color */
+    color: #fff;  /* White text color */
+    cursor: pointer;  /* Pointer cursor on hover */
+    transition: background-color 0.2s ease-in-out;  /* Smooth transition effect for background color */
+}
+
+/* Hover effect for buttons: change background color */
+form button[type="submit"]:hover, .recipe button:hover, .recipe-close-btn:hover {
+    background-color: #64c48f;  /* Change background to a green shade on hover */
+}
+
+/* Styling for the container of recipes */
+.recipe-container {
+    text-align: center;  /* Center-aligns text within the container */
+    margin: 20px;  /* Margin around the container */
+    display: grid;  /* Grid layout for responsive design */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Responsive columns */
+    grid-gap: 40px;  /* Gap between grid items */
+    width: 80%;  /* Container width */
+    margin: 10px auto;  /* Center container horizontally */
+    padding: 20px;  /* Padding inside the container */
+    place-items: center;  /* Center items within the grid cells */
+}
+
+/* Styling for each recipe card */
+.recipe {
+    background-color: #fff;  /* White background for recipe cards */
+    display: flex;  /* Flexbox layout for vertical arrangement */
+    flex-direction: column;  /* Column direction for flex items */
+    color: #000;  /* Black text color */
+    border-radius: 6px;  /* Rounded corners */
+    box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1), -5px -5px 10px rgba(34, 34, 34, 0.5);  /* Shadow effect */
+    cursor: pointer;  /* Pointer cursor on hover */
+    max-width: 350px;  /* Maximum width of the recipe card */
+    transition: transform 0.3s ease-in-out;  /* Smooth scale transformation on hover */
+}
+
+/* Hover effect for recipe cards: slightly enlarge the card */
+.recipe:hover {
+    transform: scale(1.05);  /* Enlarge the card */
+}
+
+/* Styling for images within recipe cards */
+.recipe img {
+    height: 300px;  /* Fixed height for images */
+}
+
+/* Styling for recipe titles */
+.recipe h3 {
+    font-size: 24px;  /* Font size for recipe titles */
+    margin-block: 5px;  /* Margin on top and bottom of the title */
+}
+
+/* Styling for text paragraphs within recipe cards */
+.recipe p {
+    font-size: 20px;  /* Font size for paragraphs */
+    color: #4a4a4a;  /* Dark grey color for text */
+    margin: 5px 0;  /* Margin on top and bottom of the paragraphs */
+}
+
+/* Styling for spans within recipe cards (e.g., for dish and category) */
+.recipe span {
+    font-weight: 600;  /* Bold text */
+}
+
+/* Styling for buttons within recipe cards */
+.recipe button {
+    font-size: 20px;  /* Font size for buttons */
+    font-weight: 600;  /* Bold text */
+    padding: 10px;  /* Padding inside buttons */
+    border-radius: 5px;  /* Rounded corners */
+    border: none;  /* Removes default border */
+    cursor: pointer;  /* Pointer cursor on hover */
+    margin: 10px auto;  /* Margin around buttons */
+    background-color: #000000;  /* Black background color */
+    color: #fff;  /* White text color */
+}
+
+/* Styling for the recipe details popup */
+.recipe-details {
+    display: none;  /* Hidden by default */
+    position: fixed;  /* Fixed position relative to the viewport */
+    top: 50%;  /* Center vertically */
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Center the element */
+    background-color: #694c2f;  /* Dark brown background color */
+    border-radius: 12px;  /* Rounded corners */
+    width: 40%;  /* Width of the popup */
+    height: 60%;  /* Height of the popup */
+    font-size: 20px;  /* Font size for text in the popup */
+    transition: all 0.5s ease-in-out;  /* Smooth transition for appearance */
+    overflow-y: scroll;  /* Scroll if content overflows vertically */
+}
+
+/* Padding inside the recipe details content */
+.recipe-details-content {
+    padding: 30px;  /* Padding inside the content area */
+}
+
+/* Styling for the recipe name in the popup */
+.recipeName {
+    text-align: center;  /* Center-align text */
+    text-transform: uppercase;  /* Uppercase text */
+    text-decoration: underline;  /* Underlined text */
+}
+
+/* Styling for ingredient list items */
+.ingredientList li {
+    margin-top: 10px;  /* Margin on top of list items */
+    margin-left: 20px;  /* Margin on the left side */
+}
+
+/* Margin for various sections within the recipe details */
+.recipeName, .ingredientList, .recipeInstructions {
+    margin-bottom: 20px;  /* Margin at the bottom */
+}
+
+/* Styling for the instructions in the recipe details */
+.recipeInstructions p {
+    line-height: 30px;  /* Line height for better readability */
+    white-space: pre-line;  /* Preserve white spaces and new lines */
+}
+
+/* Styling for the close button in the recipe details popup */
+.recipe-close-btn {
+    border: none;  /* Removes default border */
+    font-size: 18px;  /* Font size for the close button */
+    padding: 8px;  /* Padding inside the button */
+    border-radius: 4px;  /* Rounded corners */
+    background-color: #f44336;  /* Red background color */
+    color: #fff;  /* White text color */
+    position: absolute;  /* Absolute positioning within the popup */
+    top: 20px;  /* Distance from the top */
+    right: 20px;  /* Distance from the right */
+    width: 30px;  /* Width of the button */
+    height: 30px;  /* Height of the button */
+    display: flex;  /* Flexbox layout for centering icon */
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;  /* Center content vertically */
+}
+
+/* Styling for the scrollbar in the recipe details popup */
+.recipe-details::-webkit-scrollbar {
+    width: 10px;  /* Width of the scrollbar */
+}
+
+.recipe-details::-webkit-scrollbar-thumb {
+    background: #b5b5ba;  /* Color of the scrollbar thumb */
+    border-radius: 16px;  /* Rounded corners for the scrollbar thumb */
+}
+
+/* Styling for the main scrollbar */
+body::-webkit-scrollbar {
+    width: 16px;  /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #a1a1a1;  /* Color of the scrollbar thumb */
+}
+
+body::-webkit-scrollbar-track {
+    background: #ebebeb;  /* Background color of the scrollbar track */
+}
+
+/* Responsive styles for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    header nav {
+        flex-direction: column;  /* Stack nav items vertically */
+    }
+
+    header nav form {
+        width: 80%;  /* Form width on small screens */
+        margin-top: 20px;  /* Margin on top of the form */
+    }
+}

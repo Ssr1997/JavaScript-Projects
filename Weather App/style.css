@@ -1,0 +1,147 @@
+*{
+    margin: 0; /* Reset all margins */
+    padding: 0; /* Reset all paddings */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline (like focus outlines) */
+    font-family: sans-serif; /* Set default font for all elements */
+}
+
+body{
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    display: flex; /* Use flexbox to align content */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    background-color: #000; /* Set background color to black */
+}
+
+.container{
+    width: 400px; /* Set fixed width for the container */
+    height: min-content; /* Height adapts based on content */
+    background-color: #fff; /* White background color */
+    border-radius: 12px; /* Rounded corners for the container */
+    padding: 28px; /* Space inside the container */
+}
+
+.search-box{
+    width: 100%; /* Take full width of the container */
+    height: min-content; /* Adapt height based on content */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between input and button */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.search-box input{
+    width: 84%; /* Input takes 84% of the search box width */
+    font-size: 20px; /* Font size of the input */
+    text-transform: capitalize; /* Capitalize first letter of input text */
+    color: #000; /* Input text color */
+    background-color: #e6f5fb; /* Light blue background */
+    padding: 12px 16px; /* Padding inside input field */
+    border-radius: 14px; /* Rounded corners for the input */
+}
+
+.search-box input::placeholder{
+    color: #000; /* Black color for placeholder text */
+}
+
+.search-box button{
+    width: 46px; /* Set button width */
+    height: 46px; /* Set button height */
+    background-color: #e6f5fb; /* Light blue background */
+    border-radius: 50%; /* Make the button circular */
+    cursor: pointer; /* Show pointer on hover */
+    font-size: 20px; /* Set font size for button icon */
+}
+
+.search-box button:hover{
+    color: #fff; /* Change icon color to white when hovering */
+    background-color: #ababab; /* Change background color to gray on hover */
+}
+
+.weather-body{
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack elements vertically */
+    margin-block: 20px; /* Add vertical margin */
+    display: none; /* Initially hidden, displayed when weather data is available */
+}
+
+.weather-body img{
+    width: 60%; /* Set width of the weather image to 60% of the parent container */
+}
+
+.weather-box{
+    margin-block: 20px; /* Add vertical margin */
+    text-align: center; /* Center text inside the weather box */
+}
+
+.weather-box .temperature{
+    font-size: 40px; /* Large font size for temperature */
+    font-weight: 800; /* Bold font for emphasis */
+    position: relative; /* Positioned relative to place the 'sup' element */
+}
+
+.weather-box .temperature sup{
+    font-size: 20px; /* Smaller font size for the degree symbol */
+    position: absolute; /* Position the degree symbol */
+    font-weight: 600; /* Slightly less bold */
+}
+
+.weather-box .description{
+    font-size: 20px; /* Font size for weather description */
+    font-weight: 700; /* Bold the description */
+    text-transform: capitalize; /* Capitalize first letter of each word */
+}
+
+.weather-details{
+    width: 100%; /* Full width for weather details */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out humidity and wind elements */
+    margin-top: 30px; /* Add space above */
+}
+
+.humidity, .wind{
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Vertically align items in the center */
+}
+
+.humidity{
+    margin-left: 20px; /* Space on the left for humidity section */
+}
+
+.wind{
+    margin-right: 20px; /* Space on the right for wind section */
+}
+
+.weather-details i{
+    font-size: 36px; /* Set large icon size */
+}
+
+.weather-details .text{
+    margin-left: 10px; /* Space between icon and text */
+    font-size: 16px; /* Font size for descriptive text */
+}
+
+.text span{
+    font-size: 20px; /* Larger font for weather data values (like humidity and wind speed) */
+    font-weight: 700; /* Bold values for emphasis */
+}
+
+.location-not-found{
+    margin-top: 20px; /* Add margin above error section */
+    display: none; /* Initially hidden, displayed if location is not found */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.location-not-found h1{
+    font-size: 20px; /* Font size for error message */
+    color: #6b6b6b; /* Gray color for error text */
+    margin-block-end: 15px; /* Margin below the error message */
+}
+
+.location-not-found img{
+    width: 80%; /* Set width of the error image to 80% of the container */
+}

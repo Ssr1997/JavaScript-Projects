@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the webpage is responsive on different screen sizes -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file for styling -->
+    <title>Weather App with JavaScript</title> <!-- Page title displayed in the browser tab -->
+</head>
+<body>
+    <div class="container"> <!-- Main container for the entire app -->
+        
+        <!-- Header section containing the search input -->
+        <div class="header">
+            <div class="search-box">
+                <!-- Input field for users to enter the location -->
+                <input type="text" placeholder="Enter your location" class="input-box">
+                <!-- Search button that triggers weather search (styled as an icon using FontAwesome) -->
+                <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
+            </div>
+        </div>
+
+        <!-- Displayed when the location is not found -->
+        <div class="location-not-found">
+            <h1>Sorry, Location not Found !!!</h1> <!-- Error message when the location search fails -->
+            <!-- Error image displayed when location is not found -->
+            <img src="/Weather App/assets/404.png" alt="404 Error"> 
+        </div>
+
+        <!-- Weather data display section -->
+        <div class="weather-body">
+            <!-- Placeholder image for weather icon (cloud) -->
+            <img src="/Weather App/assets/cloud.png" alt="Weather Image" class="weather-img">
+            
+            <!-- Box to display temperature and weather description -->
+            <div class="weather-box">
+                <p class="temperature">0<sup>°C</sup></p> <!-- Displays temperature (default 0°C) -->
+                <p class="description">light rain</p> <!-- Displays a brief description of the weather (default 'light rain') -->
+            </div>
+
+            <!-- Weather details section (humidity and wind speed) -->
+            <div class="weather-details">
+                
+                <!-- Humidity section -->
+                <div class="humidity">
+                    <i class="fa-solid fa-droplet"></i> <!-- Humidity icon (water droplet) -->
+                    <div class="text">
+                        <!-- Displays humidity percentage (default 45%) -->
+                        <span id="humidity">45%</span>
+                        <p>Humidity</p> <!-- Label for humidity -->
+                    </div>
+                </div>
+                
+                <!-- Wind speed section -->
+                <div class="wind">
+                    <i class="fa-solid fa-wind"></i> <!-- Wind icon -->
+                    <div class="text">
+                        <!-- Displays wind speed (default 12Km/H) -->
+                        <span id="wind-speed">12Km/H</span>
+                        <p>Wind Speed</p> <!-- Label for wind speed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Script for FontAwesome icons -->
+        <script src="https://kit.fontawesome.com/219f1168bc.js" crossorigin="anonymous"></script>
+        <!-- Link to the external JavaScript file that handles the weather app logic -->
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

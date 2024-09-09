@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information about the document -->
+    <meta charset="UTF-8"> <!-- Defines the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page scales well on mobile devices -->
+
+    <!-- Link to the external CSS file for styling the Recipe App -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to the Font Awesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Page title -->
+    <title>Recipe App</title>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <nav>
+            <!-- App title -->
+            <h1>Recipe App</h1>
+
+            <!-- Search form -->
+            <form>
+                <!-- Text input field for searching recipes -->
+                <input type="text" placeholder="Search for Recipes..." class="searchBox">
+                
+                <!-- Submit button for the search -->
+                <button type="submit" class="searchBtn">Search</button>
+            </form>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <section>
+            <!-- Container to hold and display recipe search results -->
+            <div class="recipe-container">
+                <!-- Default message prompting users to search for recipes -->
+                <h2>Search Your Favorite Recipes...</h2>
+            </div>
+
+            <!-- Container to display individual recipe details -->
+            <div class="recipe-details">
+                <!-- Close button for the recipe details section, using a Font Awesome icon -->
+                <button type="button" class="recipe-close-btn">
+                    <i class="fas fa-times"></i> <!-- Font Awesome icon for 'close' (a cross mark) -->
+                </button>
+                
+                <!-- Content area to display details of the selected recipe -->
+                <div class="recipe-details-content"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Link to the external JavaScript file that will handle functionality -->
+    <script src="script.js"></script>
+</body>
+</html>

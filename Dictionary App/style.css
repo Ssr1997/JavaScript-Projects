@@ -1,0 +1,131 @@
+/* Defining CSS variables for reusability throughout the stylesheet */
+:root {
+    --primary-color: #008080; /* Teal color used for headers, buttons, etc. */
+    --bcg-color: #f5f5f5; /* Light background color for the body */
+    --padding: 20px; /* Padding used throughout the elements */
+    --text-color: #fff; /* White text color */
+    --border-radius: 5px; /* Border radius for rounded corners */
+}
+
+/* Applying base styles to all elements */
+* {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width/height */
+}
+
+/* Styling the body element */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Font family used for the entire page */
+    background-color: var(--bcg-color); /* Applying the background color from the root variable */
+    width: 100vw; /* Sets the width to the full viewport */
+}
+
+/* Styling the header section */
+header {
+    background-color: var(--primary-color); /* Header background color set to teal */
+    padding: var(--padding); /* Padding applied to the header */
+    color: var(--text-color); /* White text color */
+}
+
+/* Styling the header's h1 (main heading) */
+header h1 {
+    font-size: 36px; /* Large font size for the header title */
+}
+
+/* Styling the main section */
+main {
+    min-height: 78vh; /* Minimum height to cover most of the screen */
+    padding: var(--padding); /* Adding padding inside the main section */
+    max-width: 800px; /* Limiting the width to 800px for readability */
+    margin: 0 auto; /* Centering the main content horizontally */
+}
+
+/* Styling the form inside the main section */
+main form {
+    display: flex; /* Flexbox layout to align input and button */
+    justify-content: center; /* Centers form elements horizontally */
+}
+
+/* Styling input, button, and anchor tags inside the result div */
+form input[type="text"], button[type="submit"], .result div a {
+    border: none; /* Removing borders */
+    font-size: 16px; /* Setting font size */
+    font-weight: 500; /* Medium font weight */
+    border-radius: var(--border-radius); /* Rounded corners from the root variable */
+    padding: calc(var(--padding) / 2); /* Half the padding of the root variable */
+}
+
+/* Styling the text input field */
+form input[type="text"] {
+    flex-grow: 1; /* Makes the input field grow to fill available space */
+}
+
+/* Styling the submit button */
+form button[type="submit"] {
+    background-color: var(--primary-color); /* Button background color is teal */
+    color: var(--text-color); /* Button text color is white */
+    margin-left: 10px; /* Adds a gap between the input and the button */
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+}
+
+/* Styling the footer */
+footer {
+    background-color: var(--primary-color); /* Footer background color is teal */
+    color: var(--text-color); /* Footer text color is white */
+    padding: var(--padding); /* Padding applied from the root variable */
+    text-align: center; /* Centers the text */
+    font-size: 18px; /* Sets font size for footer text */
+    position: fixed; /* Fixes the footer at the bottom of the viewport */
+    width: 100%; /* Ensures the footer stretches across the width of the viewport */
+}
+
+/* Styling the result div where word data is displayed */
+.result {
+    background-color: #fff; /* White background for the result */
+    padding: var(--padding); /* Padding from root variable */
+    border-radius: var(--border-radius); /* Rounded corners from root variable */
+    margin-top: 20px; /* Adds space above the result section */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Adds a soft shadow for a subtle 3D effect */
+}
+
+/* Styling the paragraph elements inside the result div */
+.result p {
+    margin-top: 10px; /* Adds space above each paragraph */
+}
+
+/* Styling the part of speech paragraph in italics and a lighter color */
+.result p[class="partOfSpeech"] {
+    font-style: italic; /* Italicizes the part of speech text */
+    color: #808080; /* Gray color */
+    margin-top: 2px; /* Reduces the space above the part of speech */
+}
+
+/* Styling the div inside the result div */
+.result div {
+    margin-top: 20px; /* Adds space above the anchor (link) section */
+}
+
+/* Styling anchor tags inside result div */
+.result div a {
+    text-decoration: none; /* Removes underline from the link */
+    background-color: var(--primary-color); /* Teal background for the link */
+    color: var(--text-color); /* White text color */
+}
+
+/* Styling list items for antonyms and synonyms inside the result */
+.result li {
+    padding: calc(var(--padding) / 6); /* Adds padding to list items */
+    margin-left: 20px; /* Indents list items */
+}
+
+/* Media query for screens smaller than 320px (small mobile devices) */
+@media screen and (max-width: 320px) {
+    main form {
+        flex-direction: column; /* Stacks input and button vertically */
+    }
+    form button[type="submit"] {
+        margin-left: 0px; /* Removes horizontal margin */
+        margin-top: 10px; /* Adds space between input and button */
+    }
+}

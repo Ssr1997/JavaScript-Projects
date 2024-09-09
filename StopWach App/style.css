@@ -1,0 +1,49 @@
+/* Universal selector to reset margin, padding, and ensure consistent box sizing */
+*{
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Set a sans-serif font for the entire document */
+}
+
+/* Style for the body element */
+body{
+    background-color: rgba(0, 0, 0, 0.7); /* Set a semi-transparent black background */
+    color: white; /* Set white text color */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Set minimum height to full viewport height */
+    flex-direction: column; /* Arrange items in a column (stack vertically) */
+}
+
+/* Stopwatch container */
+.stopwatch{
+    background-color: rgba(0, 0, 0, 0.9); /* Set a darker semi-transparent background for the stopwatch box */
+    padding: 20px 24px; /* Add padding inside the container */
+    border-radius: 10px; /* Round the corners of the stopwatch container */
+}
+
+/* Timer display styles */
+.timerDisplay{
+    font-size: 50px; /* Set a large font size for the timer */
+    font-weight: 600; /* Make the numbers bold */
+}
+
+/* Container for the buttons */
+.buttons{
+    margin-top: 20px; /* Add some space above the buttons */
+}
+
+/* Style for all buttons */
+.btn{
+    font-size: 20px; /* Set a medium font size */
+    background: none; /* Remove default background */
+    border: none; /* Remove default borders */
+    color: white; /* Set button text color to white */
+    background-color: var(--clr); /* Use the CSS variable --clr for button background color, different for each button */
+    padding: 12px 24px; /* Add padding to make the buttons larger and more clickable */
+    margin-inline: 12px; /* Add space between buttons horizontally */
+    border-radius: 8px; /* Round the corners of the buttons */
+    cursor: pointer; /* Change the mouse cursor to a pointer (hand) when hovering over the button */
+}

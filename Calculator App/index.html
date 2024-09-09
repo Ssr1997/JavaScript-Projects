@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information about the document -->
+    <meta charset="UTF-8"> <!-- Defines the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <title>Calculator</title> <!-- Title of the webpage displayed in the browser tab -->
+    
+    <!-- Link to the external CSS file for styling the calculator -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Calculator container -->
+    <div class="calculator">
+        <!-- Input box where numbers and results are displayed -->
+        <input type="text" placeholder="0" id="inputBox"> <!-- Placeholder text set to "0" by default -->
+
+        <!-- First row of buttons: Clear (AC), Delete (DEL), Percentage (%), and Division (/) -->
+        <div>
+            <button>AC</button> <!-- Clears all input -->
+            <button>DEL</button> <!-- Deletes the last entered character -->
+            <button>%</button> <!-- Percentage operator -->
+            <button class="operator">/</button> <!-- Division operator (styled as an operator) -->
+        </div>
+
+        <!-- Second row of buttons: Numbers 7, 8, 9, and Multiplication (*) -->
+        <div>
+            <button>7</button> <!-- Button for number 7 -->
+            <button>8</button> <!-- Button for number 8 -->
+            <button>9</button> <!-- Button for number 9 -->
+            <button class="operator">*</button> <!-- Multiplication operator (styled as an operator) -->
+        </div>
+
+        <!-- Third row of buttons: Numbers 4, 5, 6, and Subtraction (-) -->
+        <div>
+            <button>4</button> <!-- Button for number 4 -->
+            <button>5</button> <!-- Button for number 5 -->
+            <button>6</button> <!-- Button for number 6 -->
+            <button class="operator">-</button> <!-- Subtraction operator (styled as an operator) -->
+        </div>
+
+        <!-- Fourth row of buttons: Numbers 1, 2, 3, and Addition (+) -->
+        <div>
+            <button>1</button> <!-- Button for number 1 -->
+            <button>2</button> <!-- Button for number 2 -->
+            <button>3</button> <!-- Button for number 3 -->
+            <button class="operator">+</button> <!-- Addition operator (styled as an operator) -->
+        </div>
+
+        <!-- Fifth row of buttons: Double zero (00), Zero (0), Decimal point (.), and Equals (=) -->
+        <div>
+            <button>00</button> <!-- Button for double zero -->
+            <button>0</button> <!-- Button for number 0 -->
+            <button>.</button> <!-- Button for decimal point -->
+            <button class="equalBtn">=</button> <!-- Equals button (styled as the "equalBtn" class) -->
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file to handle functionality -->
+    <script src="script.js"></script>
+</body>
+</html>

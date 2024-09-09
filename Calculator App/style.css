@@ -1,0 +1,108 @@
+/* Importing a custom font "Bree Serif" from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+* {
+    /* Resetting margin and padding for all elements to zero */
+    margin: 0;
+    padding: 0;
+    
+    /* Ensures padding and border are included within element's total width and height */
+    box-sizing: border-box;
+
+    /* Applying the "Bree Serif" font to all elements */
+    font-family: "Bree Serif", serif;
+}
+
+/* Styling the body */
+body {
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    
+    /* Flexbox layout for centering the calculator */
+    display: flex;
+    justify-content: center; /* Horizontally centers the calculator */
+    align-items: center; /* Vertically centers the calculator */
+    
+    /* Applying a gradient background that blends from dark gray to a slightly lighter shade */
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+/* Styling the calculator container */
+.calculator {
+    border: 1px solid #717377; /* Light gray border around the calculator */
+    padding: 20px; /* Padding inside the calculator container */
+    border-radius: 16px; /* Rounded corners for a softer look */
+    
+    /* Transparent background to allow gradient from body to show through */
+    background: transparent;
+
+    /* Box shadow for a slightly raised 3D effect */
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5); /* A subtle shadow with transparency */
+}
+
+/* Styling the input field for displaying numbers */
+input {
+    width: 100%; /* Full width of the calculator container */
+    border: none; /* Removing default input border */
+    padding: 24px; /* Adding padding inside the input field */
+    margin: 10px; /* Adding margin between input and other elements */
+    
+    /* Transparent background to allow background gradient to show through */
+    background: transparent;
+
+    /* Box shadow to give input field a soft, inset look */
+    box-shadow: 0px 3px 15px rgba(84,84,84,0.1);
+
+    /* Large font size for visibility */
+    font-size: 40px; 
+
+    /* Aligning the text (numbers) to the right */
+    text-align: right;
+
+    /* Changing the cursor to pointer when hovering over the input */
+    cursor: pointer;
+
+    /* White text color for contrast against the dark background */
+    color: #fff;
+}
+
+/* Styling the placeholder text inside the input field */
+input::placeholder {
+    color: #fff; /* White placeholder text color */
+}
+
+/* Styling the calculator buttons */
+button {
+    border: none; /* Removing default button border */
+    width: 60px; /* Setting fixed width for the buttons */
+    height: 60px; /* Setting fixed height for the buttons */
+    margin: 10px; /* Adding margin around each button */
+    
+    /* Rounded button shape */
+    border-radius: 50%;
+    
+    /* Transparent background for buttons */
+    background: transparent;
+
+    /* White text color for button labels */
+    color: #fff;
+
+    /* Medium font size for button labels */
+    font-size: 20px;
+
+    /* Box shadow for a soft, raised button effect */
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+
+    /* Pointer cursor to indicate clickability */
+    cursor: pointer;
+}
+
+/* Styling for the "equal" button */
+.equalBtn {
+    background-color: #fb7c14; /* Bright orange background for emphasis */
+}
+
+/* Styling for operator buttons (+, -, *, /) */
+.operator {
+    color: #6dee0a; /* Bright green text color for operators */
+}

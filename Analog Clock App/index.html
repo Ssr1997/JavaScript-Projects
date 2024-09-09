@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding and responsive behavior of the page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Links an external CSS file for styling the clock -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- The title that appears in the browser tab -->
+    <title>Analog Clock</title>
+</head>
+<body>
+    <!-- Main container for the clock, which houses the clock face and hands -->
+    <div class="container">
+        <div class="clock">
+            <!-- Hour hand: The custom property '--clr' sets the hand's color, '--h' sets its height -->
+            <div style = "--clr: #ff3d58; --h: 74px" id="hour" class="hand"><i></i></div>
+            
+            <!-- Minute hand: The custom property '--clr' sets the hand's color, '--h' sets its height -->
+            <div style = "--clr: #00a6ff; --h: 84px" id="min" class="hand"><i></i></div>
+            
+            <!-- Second hand: The custom property '--clr' sets the hand's color, '--h' sets its height -->
+            <div style = "--clr: #ffffff; --h: 94px" id="sec" class="hand"><i></i></div>
+            
+            <!-- Hour markers from 1 to 12, styled using CSS (assumed to be positioned in a circular layout) -->
+            <span style="--i: 1"><b>1</b></span>
+            <span style="--i: 2"><b>2</b></span>
+            <span style="--i: 3"><b>3</b></span>
+            <span style="--i: 4"><b>4</b></span>
+            <span style="--i: 5"><b>5</b></span>
+            <span style="--i: 6"><b>6</b></span>
+            <span style="--i: 7"><b>7</b></span>
+            <span style="--i: 8"><b>8</b></span>
+            <span style="--i: 9"><b>9</b></span>
+            <span style="--i: 10"><b>10</b></span>
+            <span style="--i: 11"><b>11</b></span>
+            <span style="--i: 12"><b>12</b></span>
+        </div>
+    </div>
+    
+    <!-- Links an external JavaScript file that will control the clock's functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
