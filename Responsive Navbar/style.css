@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* Global styles reset margin, padding, and set box-sizing for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    /* Using the Bree Serif font from Google Fonts and setting a default color */
+    font-family: 'Bree Serif', serif;
+    color: #fff;  /* Text color set to white */
+}
+
+/* Styles for the logo image */
+.logo img{
+    width: 40px; /* Set width of the logo */
+    border-radius: 50%; /* Rounded logo */
+    filter: invert(); /* Inverts the image colors */
+}
+
+/* Set the background color for the body */
+body{
+    background-color: rgba(0, 0, 0, 0.1); /* Light black background with transparency */
+}
+
+/* Header and navigation bar styling */
+header nav{
+    display: flex; /* Flexbox layout for nav items */
+    justify-content: space-between; /* Spaces items evenly with space between */
+    align-items: center; /* Aligns items vertically at the center */
+    padding: 12px 20px; /* Padding inside the nav */
+    background-color: #334155; /* Dark background color for the nav */
+}
+
+/* Styling for the unordered list (navigation menu) */
+ul{
+    display: flex; /* Flexbox layout for horizontal navigation links */
+    justify-content: space-between; /* Evenly spaces out the list items */
+    flex-basis: 44%; /* Takes 44% of the width */
+}
+
+/* Removes bullet points for list items */
+ul li{
+    list-style-type: none;
+}
+
+/* Styling for navigation links */
+ul li a{
+    font-weight: 600; /* Makes the text bold */
+    text-decoration: none; /* Removes default underline for links */
+}
+
+/* Styles for hovered links (except the last child) and the active link */
+ul li:not(:last-child) a:hover, ul li a.active{
+    text-decoration: underline 2px; /* Underlines the text */
+    text-underline-offset: 4px; /* Moves the underline away from the text */
+    color: #4ca8e1; /* Light blue color for the hover/active links */
+    text-decoration-color: #fff; /* White underline */
+}
+
+/* Button styling */
+.btn{
+    font-weight: 700; /* Makes the button text bold */
+    padding: 8px 20px; /* Adds padding inside the button */
+    border: none; /* Removes border */
+    background: transparent; /* Transparent background */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #fff; /* White text */
+}
+
+/* Button hover effect */
+.btn:hover{
+    background-color: #0091ff; /* Changes background to blue on hover */
+}
+
+/* Hamburger icon for mobile view */
+.hamburger{
+    font-size: 30px; /* Large icon size */
+    display: none; /* Hidden by default */
+}
+
+/* Media query for screens smaller than 1024px */
+@media screen and (max-width:1024px) {
+    
+    /* Show the hamburger icon for mobile */
+    .hamburger{
+        display: flex;
+        cursor: pointer;
+    }
+    
+    /* Hide the navigation menu */
+    ul{
+        display: none;
+    }
+    
+    /* Show the menu when the hamburger is active */
+    ul.ham_active{
+        display: flex; /* Flexbox for vertical layout */
+        flex-direction: column; /* Column layout */
+        justify-content: center; /* Center the list items */
+        align-items: center; /* Align items horizontally in the center */
+        position: absolute; /* Position it over the page */
+        top: 60px; /* Position it below the header */
+        left: 0;
+        width: 100%; /* Full-width navigation */
+        gap: 24px; /* Space between list items */
+        height: 320px; /* Fixed height */
+        background-color: #30363f; /* Dark background */
+    }   
+}
