@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- This defines the document type as HTML5 -->
+<html lang="en">
+<!-- The HTML language is set to English -->
+<head>
+    <meta charset="UTF-8">
+    <!-- Character encoding set to UTF-8 for international character support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport settings for responsive design, ensuring the page scales properly on different devices -->
+    <title>Form Validation in Javascript</title>
+    <!-- Title of the webpage that appears in the browser tab -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to an external CSS file for styling the webpage -->
+</head>
+
+<body>
+    <!-- The content of the webpage starts here -->
+    <div class="container">
+        <!-- Container div to group the page content -->
+        <div class="box">
+            <!-- Box div to wrap form and additional content -->
+
+            <header class="signup-header">
+                <!-- Header section for the signup form -->
+                <h1>Signup</h1>
+                <!-- Heading for the signup form -->
+            </header>
+
+            <main class="signup-body">
+                <!-- Main content area of the form -->
+                <form action="#">
+                    <!-- Form starts here, action="#" means it currently doesn't send data anywhere -->
+                    
+                    <p>
+                        <label for="name">Full Name</label>
+                        <!-- Label for the "name" input field -->
+                        <input type="text" placeholder="Type name here" id="name"/>
+                        <!-- Input field for full name, with a placeholder -->
+                        <i class="fa-solid"></i>
+                        <!-- FontAwesome icon (empty here, could be used for success/error validation icons) -->
+                        <span id="nameError"></span>
+                        <!-- Error message placeholder for name validation -->
+                    </p>
+
+                    <p>
+                        <label for="email">Email</label>
+                        <!-- Label for the "email" input field -->
+                        <input type="email" placeholder="abc@gmail.com" id="email"/>
+                        <!-- Input field for email, with a placeholder -->
+                        <i class="fa-solid"></i>
+                        <!-- FontAwesome icon for email -->
+                        <span id="emailError"></span>
+                        <!-- Error message placeholder for email validation -->
+                    </p>
+
+                    <p>
+                        <label for="password">Password</label>
+                        <!-- Label for the "password" input field -->
+                        <input type="password" placeholder="at least 8 characters" id="password"/>
+                        <!-- Password input field with a placeholder for guidance -->
+                        <i class="fa-solid"></i>
+                        <!-- FontAwesome icon for password -->
+                        <span id="passError"></span>
+                        <!-- Error message placeholder for password validation -->
+                    </p>
+
+                    <p>
+                        <label for="confirmpassword">Confirm Password</label>
+                        <!-- Label for the "confirm password" input field -->
+                        <input type="password" placeholder="Both passwords must match" id="confirmpassword"/>
+                        <!-- Confirm password input field with a placeholder for guidance -->
+                        <i class="fa-solid"></i>
+                        <!-- FontAwesome icon for confirm password -->
+                        <span id="cpassError"></span>
+                        <!-- Error message placeholder for confirm password validation -->
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Create Account" id="submitBtn"/>
+                        <!-- Submit button to create an account -->
+                    </p>
+                </form>
+            </main>
+
+            <footer class="signup-footer">
+                <!-- Footer section with a login prompt -->
+                <p>Already have an account? <a href="">Login</a></p>
+                <!-- Link to login page (currently an empty href) -->
+            </footer>
+        </div>
+    </div>
+</body>
+
+<!-- External JavaScript file for handling form validation or any interactivity -->
+<script src="script.js"></script>
+<!-- FontAwesome script to load icons -->
+<script src="https://kit.fontawesome.com/219f1168bc.js" crossorigin="anonymous"></script>
+
+</html>

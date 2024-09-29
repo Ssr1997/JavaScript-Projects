@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #fff;
+    /* Universal selector to reset margin and padding, apply box-sizing to border-box, and set default font and text color */
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: url('wave.png') no-repeat;
+    background-size: cover;
+    /* Container takes up full viewport height, with a background image that doesn't repeat and covers the container */
+}
+
+.box {
+    width: 400px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* The box is centered in the viewport using `transform` */
+    box-shadow: 2px 2px 5px #89c9f3, -2px -2px 5px #89c9f3;
+    /* Adds a shadow effect to the box with two different light blue shadows */
+    border-radius: 8px;
+    /* Rounded corners */
+    backdrop-filter: blur(8px);
+    /* Blurs the background behind the box */
+    padding: 20px 40px;
+    /* Padding inside the box for spacing */
+}
+
+.signup-header h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 5px 8px;
+    /* Styling the signup header, centering the text, and adding padding */
+}
+
+.signup-body p {
+    margin-top: 20px;
+    position: relative;
+    /* Adds margin between form elements and allows relative positioning of icons */
+}
+
+.signup-body p i {
+    position: absolute;
+    top: 38px;
+    right: 16px;
+    color: #90ee90;
+    font-size: 22px;
+    /* Positions FontAwesome icons inside input fields, top-right aligned with green color */
+}
+
+.signup-body p span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #90ee90;
+    /* Styling for form validation messages (green color) */
+}
+
+.signup-body p label {
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    /* Labels have bold text, 18px size, and become clickable */
+}
+
+.signup-body p input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font: 18px;
+    margin-block: 4px;
+    border: none;
+    outline: none;
+    color: #000;
+    /* Inputs take up the full width of the box, have padding for space, rounded corners, and black text */
+}
+
+.signup-body p input[type="submit"] {
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    /* Submit button with bold white text on a blue background, no border */
+}
+
+.signup-body p input[type="submit"]:hover {
+    background-color: #2773a5;
+    /* Changes the button color to a darker blue when hovered */
+}
+
+.signup-footer p {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    /* Centers footer text and adds spacing from the form */
+}
+
+.signup-footer p a {
+    text-decoration: none;
+    /* Removes the underline from the footer link */
+}
+
+.signup-footer p a:hover {
+    text-decoration: underline;
+    /* Underlines the link in the footer when hovered */
+}
