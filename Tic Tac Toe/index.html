@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Declares the document type (HTML5) and specifies the language of the page as English -->
+    <meta charset="UTF-8">
+    <!-- Ensures the page scales correctly on different devices by setting the viewport width and zoom level -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to an external CSS file (style.css) for styling the page -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Sets the title of the webpage (displayed on the browser tab) -->
+    <title>Tic Tac Toe Game</title>
+</head>
+<body>
+    <!-- Main container for the game content -->
+    <div class="container">
+        <!-- Main heading for the game -->
+        <h1>Let's play Tic-Tac-Toe Game</h1>
+        
+        <!-- Game board with 9 cells for the Tic-Tac-Toe grid -->
+        <div class="game-board">
+            <div class="cell"></div> <!-- Empty cell 1 -->
+            <div class="cell"></div> <!-- Empty cell 2 -->
+            <div class="cell"></div> <!-- Empty cell 3 -->
+            <div class="cell"></div> <!-- Empty cell 4 -->
+            <div class="cell"></div> <!-- Empty cell 5 -->
+            <div class="cell"></div> <!-- Empty cell 6 -->
+            <div class="cell"></div> <!-- Empty cell 7 -->
+            <div class="cell"></div> <!-- Empty cell 8 -->
+            <div class="cell"></div> <!-- Empty cell 9 -->
+        </div>
+
+        <!-- Section displaying players' information (Player 1 with "X", Player 2 with "O") -->
+        <div class="game-players">
+            <div class="player player1">Player 1 : X</div> <!-- Displays Player 1 (X) -->
+            <div class="player player2">Player 2 : O</div> <!-- Displays Player 2 (O) -->
+        </div>
+
+        <!-- Button to restart the game -->
+        <button class="restartBtn">Restart</button>
+
+        <!-- Alert box to display game status (e.g., winner announcement) -->
+        <div class="alertBox">Alert</div>
+    </div>
+
+    <!-- Links to an external JavaScript file (script.js) for game logic -->
+    <script src="script.js"></script>
+</body>
+</html>
