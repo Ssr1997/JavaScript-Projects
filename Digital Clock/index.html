@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Specifies the document type and declares it as HTML5. The "lang" attribute in <html> specifies the language of the content as English. -->
+<head>
+    <!-- <head> contains metadata and other important information for the document, but it is not visible in the browser. -->
+
+    <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document, ensuring it displays special characters correctly. "UTF-8" is a standard encoding. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures that the page is responsive and scales properly on different devices. The "width=device-width" makes the page use the full width of the device's screen, and "initial-scale=1.0" sets the initial zoom level. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Links an external CSS file named "style.css" to style the HTML elements on the page. -->
+
+    <title>Digital Clock</title>
+    <!-- Specifies the title of the page that will be displayed on the browser tab. -->
+</head>
+
+<body>
+    <!-- The <body> tag contains the visible content of the web page. -->
+
+    <div class="clock">
+        <!-- Creates a container (a <div>) for the clock. The class "clock" can be styled using CSS in the linked "style.css". -->
+        
+        <h1 id="time"></h1>
+        <!-- A heading element (<h1>) where the current time will be displayed. It has an "id" of "time" to uniquely identify it for JavaScript manipulation. -->
+
+        <span id="timeformat"></span>
+        <!-- A <span> element where you can add the time format (e.g., AM/PM) next to the time. It also has a unique "id" for future JavaScript use. -->
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Links an external JavaScript file named "script.js" that will handle the logic for the digital clock. -->
+</body>
+</html>

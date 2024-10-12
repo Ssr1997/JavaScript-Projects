@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+The universal selector (*) applies the following styles to all elements:
+- Removes default margins and padding.
+- Uses `box-sizing: border-box` to include padding and borders in the element's total width and height.
+- Sets the font family to Arial, Helvetica, or a sans-serif fallback.
+*/
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("https://plus.unsplash.com/premium_photo-1673726864881-49e0f3816082?q=80&w=1768&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat;
+    background-size: cover;
+}
+/* 
+The <body> tag styles:
+- Uses flexbox to center the content both horizontally (`justify-content: center`) and vertically (`align-items: center`).
+- `min-height: 100vh` ensures the body takes up at least 100% of the viewport height.
+- `background` adds a background image and ensures it doesn't repeat.
+- `background-size: cover` makes sure the image covers the entire background area proportionally.
+*/
+
+.clock{
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.7);
+    height: 24vh;
+    border-radius: 12px;
+    padding: 20px;
+}
+/* 
+The .clock class styles the container of the clock:
+- Sets the width to 100%, but limits it to a maximum of 380px.
+- Uses flexbox to center the content inside the clock.
+- Adds a shadow with two layers for a slight glow effect.
+- Sets the height to 24% of the viewport height.
+- `border-radius: 12px` rounds the corners of the clock.
+- Adds padding of 20px inside the clock for spacing.
+*/
+
+.clock h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+/* 
+The <h1> inside .clock styles:
+- Sets a large font size (3.5rem) for the clock display.
+- Uses a font-weight of 600, making the text semi-bold.
+*/
+
+.clock span{
+    position: relative;
+    top: -13%;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 700;
+}
+/* 
+The <span> inside .clock styles:
+- Positions the span slightly above the baseline of the clock (`top: -13%`) for alignment.
+- Adds a 5px margin for spacing.
+- Sets the font size to 20px and makes the text bold with a font-weight of 700.
+*/
+
+@media screen and (max-width: 274px) {
+    .clock{
+        max-width: 210px;
+        padding: 5px;
+    }
+    .clock h1{
+        font-size: 2.1rem;
+    }
+}
+/* 
+A media query for screens with a width of 274px or less:
+- Limits the clock's max-width to 210px.
+- Reduces the padding to 5px to save space.
+- Shrinks the font size of <h1> to 2.1rem to fit smaller screens.
+*/
+
+@media screen and (min-width: 275px) and (max-width: 400px){
+    .clock{
+        max-width: 260px;
+        padding: 5px;
+    }
+    .clock h1{
+        font-size: 2.4rem;
+    }
+}
+/* 
+A media query for screens between 275px and 400px in width:
+- Limits the clock's max-width to 260px.
+- Keeps the padding at 5px.
+- Adjusts the font size of <h1> to 2.4rem, suitable for medium-sized screens.
+*/
